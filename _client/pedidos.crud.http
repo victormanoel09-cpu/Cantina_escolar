@@ -1,0 +1,21 @@
+### Listar pedidos (suporta filtros: ?status= ?usuario=)[cite: 6]
+GET http://localhost:3000/api/pedidos
+
+### Detalhar um pedido com utilizador, produto e total[cite: 6, 7]
+GET http://localhost:3000/api/pedidos/1
+
+### Criar um pedido[cite: 6]
+POST http://localhost:3000/api/pedidos
+Content-Type: application/json
+
+{
+  "usuario_id": 2,
+  "produto_id": 1,
+  "quantidade": 2
+}
+
+### Avançar o status do pedido (ordem: pendente -> pronto -> entregue)[cite: 6, 7]
+PATCH http://localhost:3000/api/pedidos/1/status
+
+### Cancelar o pedido (apenas se estiver pendente)[cite: 6, 7]
+PATCH http://localhost:3000/api/pedidos/4/cancelamento

@@ -1,0 +1,38 @@
+### Listar produtos (suporta filtros: ?categoria= ?busca= ?disponivel= ?pagina= ?limite=)[cite: 6]
+GET http://localhost:3000/api/produtos
+
+### Detalhar um produto (já com a categoria aninhada)[cite: 6]
+GET http://localhost:3000/api/produtos/1
+
+### Cadastrar um produto[cite: 6]
+POST http://localhost:3000/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Pão de Queijo",
+  "preco": 4.50,
+  "disponivel": true,
+  "categoria_id": 1
+}
+
+### Atualizar um produto[cite: 6]
+PUT http://localhost:3000/api/produtos/9
+Content-Type: application/json
+
+{
+  "nome": "Pão de Queijo Recheado",
+  "preco": 6.00,
+  "disponivel": true,
+  "categoria_id": 1
+}
+
+### Ligar ou desligar a venda do produto (Disponibilidade)[cite: 6]
+PATCH http://localhost:3000/api/produtos/9/disponibilidade
+Content-Type: application/json
+
+{
+  "disponivel": false
+}
+
+### Remover um produto[cite: 6]
+DELETE http://localhost:3000/api/produtos/9

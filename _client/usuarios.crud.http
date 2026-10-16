@@ -1,0 +1,31 @@
+### Listar todos os utilizadores[cite: 6]
+GET http://localhost:3000/api/usuarios
+
+### Detalhar um utilizador específico[cite: 6]
+GET http://localhost:3000/api/usuarios/1
+
+### Cadastrar um utilizador[cite: 6]
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Mariana Costa",
+  "email": "mariana.costa@escola.com",
+  "matricula": "2026005"
+}
+
+### Atualizar dados de um utilizador[cite: 6]
+PUT http://localhost:3000/api/usuarios/5
+Content-Type: application/json
+
+{
+  "nome": "Mariana Costa Silva",
+  "email": "mariana.silva@escola.com",
+  "matricula": "2026005"
+}
+
+### Histórico de pedidos do utilizador[cite: 6]
+GET http://localhost:3000/api/usuarios/1/pedidos
+
+### Remover um utilizador[cite: 6]
+DELETE http://localhost:3000/api/usuarios/5

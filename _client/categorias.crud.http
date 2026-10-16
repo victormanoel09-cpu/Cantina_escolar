@@ -1,0 +1,27 @@
+### Listar todas as categorias[cite: 6]
+GET http://localhost:3000/api/categorias
+
+### Detalhar uma categoria específica[cite: 6]
+GET http://localhost:3000/api/categorias/1
+
+### Criar uma nova categoria[cite: 6]
+POST http://localhost:3000/api/categorias
+Content-Type: application/json
+
+{
+  "nome": "Salgados Especiais"
+}
+
+### Atualizar uma categoria[cite: 6]
+PUT http://localhost:3000/api/categorias/4
+Content-Type: application/json
+
+{
+  "nome": "Salgados Premium"
+}
+
+### Listar produtos daquela categoria[cite: 6]
+GET http://localhost:3000/api/categorias/1/produtos
+
+### Remover uma categoria (Regra 7: impede se tiver produtos)[cite: 6, 7]
+DELETE http://localhost:3000/api/categorias/4
